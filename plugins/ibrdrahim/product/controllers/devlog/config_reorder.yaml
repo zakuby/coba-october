@@ -1,0 +1,4 @@
+title: Devlog
+modelClass: Ibrdrahim\product\Models\Devlog
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,63 @@
+fields:
+    game:
+        label: Game
+        oc.commentPosition: ''
+        nameFrom: name
+        descriptionFrom: description
+        span: full
+        type: relation
+    devlog_name:
+        label: Name
+        oc.commentPosition: ''
+        span: left
+        type: text
+    devlog_progress:
+        label: Progress
+        span: auto
+        type: number
+        comment: '0-100 (Percent)'
+    devlog_date:
+        label: Date
+        oc.commentPosition: ''
+        mode: datetime
+        span: auto
+        type: datepicker
+    devlog_link:
+        label: 'External Link'
+        oc.commentPosition: ''
+        span: full
+        type: text
+    devlog_short_description:
+        label: 'Short Description'
+        size: small
+        oc.commentPosition: ''
+        span: full
+        type: textarea
+    devlog_content:
+        label: Content
+        size: giant
+        oc.commentPosition: ''
+        span: full
+        type: textarea
+    featured_image:
+        label: 'Featured Image'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+    gallery:
+        label: Gallery
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload

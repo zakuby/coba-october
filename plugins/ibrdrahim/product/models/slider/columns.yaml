@@ -1,0 +1,17 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
+    tag_line:
+        label: Tagline
+        type: text
+        searchable: true
+        sortable: true
+    sequence:
+        label: Sequence
+        type: number
+        searchable: true
+        sortable: true

@@ -1,0 +1,34 @@
+fields:
+    name:
+        label: Name
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    sequence:
+        label: Sequence
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    tag_line:
+        label: 'Tag Line'
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+    external_link:
+        label: 'External Link'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    image:
+        label: Image
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '300'
+        imageHeight: '300'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload

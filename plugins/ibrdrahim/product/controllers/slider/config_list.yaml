@@ -1,0 +1,11 @@
+list: $/ibrdrahim/product/models/slider/columns.yaml
+modelClass: Ibrdrahim\product\Models\Slider
+title: Slider
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'ibrdrahim/product/slider/update/:id'

@@ -1,0 +1,24 @@
+plugin:
+    name: 'ibrdrahim.product::lang.plugin.name'
+    description: 'ibrdrahim.product::lang.plugin.description'
+    author: ibrdrahim
+    icon: oc-icon-archive
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Genesis Arthangel'
+        url: ibrdrahim/product/game
+        icon: icon-building
+        sideMenu:
+            side-menu-item2:
+                label: Slider
+                url: ibrdrahim/product/slider
+                icon: icon-image
+            side-menu-item:
+                label: Game
+                url: ibrdrahim/product/game
+                icon: icon-gamepad
+            side-menu-item3:
+                label: Devlog
+                url: ibrdrahim/product/devlog
+                icon: icon-tasks

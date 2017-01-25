@@ -1,0 +1,4 @@
+title: Slider
+modelClass: Ibrdrahim\product\Models\Slider
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,87 @@
+tabs:
+    fields:
+        name:
+            label: Name
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: Main
+        slug:
+            label: slug
+            span: auto
+            preset:
+                field: name
+                type: slug
+            type: text
+            comment: '/game/{slug} , eg : /game/sofiv'
+            tab: Main
+        short_description:
+            label: 'Short Description'
+            size: small
+            oc.commentPosition: ''
+            span: full
+            type: textarea
+            tab: Main
+        description:
+            label: Description
+            size: giant
+            oc.commentPosition: ''
+            span: full
+            type: textarea
+            tab: Main
+        featured_image:
+            label: 'Featured Image'
+            oc.commentPosition: ''
+            mode: image
+            imageWidth: '200'
+            imageHeight: '200'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            tab: Images
+        gallery:
+            label: Gallery
+            oc.commentPosition: ''
+            mode: image
+            imageWidth: '400'
+            imageHeight: '400'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            tab: Images
+        is_published:
+            label: 'Publish Game'
+            span: auto
+            type: switch
+            tab: Config
+        publish_date:
+            label: 'Publish Date'
+            oc.commentPosition: ''
+            mode: datetime
+            span: left
+            type: datepicker
+            tab: Config
+        wiki_link:
+            label: 'Wiki URL'
+            oc.commentPosition: ''
+            span: full
+            type: text
+            tab: Config
+        external_link:
+            label: 'External Link'
+            oc.commentPosition: ''
+            span: full
+            type: text
+            tab: Config
+        external_link_enabled:
+            label: 'Enable External link'
+            span: auto
+            hidden: 0
+            type: switch
+            tab: Config

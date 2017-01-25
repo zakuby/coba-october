@@ -1,0 +1,35 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table ibrdrahim_product_item'
+    - builder_table_create_ibrdrahim_product_item.php
+1.0.3:
+    - 'Updated table ibrdrahim_product_item'
+    - builder_table_update_ibrdrahim_product_item.php
+1.0.4:
+    - 'Created table ibrdrahim_product_slider'
+    - builder_table_create_ibrdrahim_product_slider.php
+1.0.5:
+    - 'Updated table ibrdrahim_product_slider'
+    - builder_table_update_ibrdrahim_product_slider.php
+1.0.6:
+    - 'Updated table ibrdrahim_product_item'
+    - builder_table_update_ibrdrahim_product_item_2.php
+1.0.7:
+    - 'Updated table ibrdrahim_product_item'
+    - builder_table_update_ibrdrahim_product_game.php
+1.0.8:
+    - 'Updated table ibrdrahim_product_game'
+    - builder_table_update_ibrdrahim_product_game_2.php
+1.0.9:
+    - 'Updated table ibrdrahim_product_game'
+    - builder_table_update_ibrdrahim_product_game_3.php
+1.0.10:
+    - 'Updated table ibrdrahim_product_game'
+    - builder_table_update_ibrdrahim_product_game_4.php
+1.0.11:
+    - 'Created table ibrdrahim_product_devlog'
+    - builder_table_create_ibrdrahim_product_devlog.php
+1.0.12:
+    - 'Updated table ibrdrahim_product_devlog'
+    - builder_table_update_ibrdrahim_product_devlog.php

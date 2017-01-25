@@ -1,0 +1,18 @@
+columns:
+    devlog_name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    game:
+        label: Game
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: game
+    devlog_date:
+        label: Date
+        type: datetime
+        searchable: true
+        sortable: true

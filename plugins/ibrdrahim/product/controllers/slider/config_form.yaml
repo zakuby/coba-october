@@ -1,0 +1,10 @@
+name: Slider
+form: $/ibrdrahim/product/models/slider/fields.yaml
+modelClass: Ibrdrahim\product\Models\Slider
+defaultRedirect: ibrdrahim/product/slider
+create:
+    redirect: 'ibrdrahim/product/slider/update/:id'
+    redirectClose: ibrdrahim/product/slider
+update:
+    redirect: ibrdrahim/product/slider
+    redirectClose: ibrdrahim/product/slider

@@ -1,0 +1,38 @@
+title = "game"
+url = "/game/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Ibrdrahim\product\Models\Game"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+<div>
+    <div class="devlog-title">
+        <h1>{{record.name}}</h1>
+    </div>
+    
+    {%partial "site/path_slider" sliders=record.gallery %}
+    
+    <div>{{record.description | raw}}</div>
+    
+    {% for devlog in record.devlog %}
+        <div class="devlog-div">
+        <div align=center>
+            <img class="devlog-thumb" src="{{devlog.featured_image.path}}" />
+            </div>
+        
+            <h2>{{devlog.devlog_name}}</h2>
+            <p>{{devlog.devlog_content}}</p>
+            <p>{{devlog.devlog_short_description}}</p>
+            <div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="{{devlog.devlog_progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{devlog.devlog_progress}}%;">
+    <span class="sr-only">60% Complete</span>
+  </div>
+</div>
+        </div>
+    {%endfor%}
+</div>

@@ -1,0 +1,10 @@
+name: Devlog
+form: $/ibrdrahim/product/models/devlog/fields.yaml
+modelClass: Ibrdrahim\product\Models\Devlog
+defaultRedirect: ibrdrahim/product/devlog
+create:
+    redirect: 'ibrdrahim/product/devlog/update/:id'
+    redirectClose: ibrdrahim/product/devlog
+update:
+    redirect: ibrdrahim/product/devlog
+    redirectClose: ibrdrahim/product/devlog

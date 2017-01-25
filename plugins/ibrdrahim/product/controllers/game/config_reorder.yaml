@@ -1,0 +1,4 @@
+title: Game
+modelClass: Ibrdrahim\product\Models\Game
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: Game
+form: $/ibrdrahim/product/models/game/fields.yaml
+modelClass: Ibrdrahim\product\Models\Game
+defaultRedirect: ibrdrahim/product/game
+create:
+    redirect: 'ibrdrahim/product/game/update/:id'
+    redirectClose: ibrdrahim/product/game
+update:
+    redirect: ibrdrahim/product/game
+    redirectClose: ibrdrahim/product/game
