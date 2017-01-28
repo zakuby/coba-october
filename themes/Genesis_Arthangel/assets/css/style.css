@@ -545,3 +545,10 @@ header[role="banner"] {
 .progress
 {    width: 800px;
 }
+.devlog-content{
+	margin-left: 30px;
+}
+.devlog-button{    
+	margin-left: 550px;
+    margin-bottom: 70px;
+}

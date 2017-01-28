@@ -10,15 +10,23 @@ modelKeyColumn = "slug"
 displayColumn = "name"
 notFoundMessage = "Record not found"
 ==
-<div>
+<div class="devlog-content">
     <div class="devlog-title">
         <h1>{{record.name}}</h1>
     </div>
     
     {%partial "site/path_slider" sliders=record.gallery %}
     
+    <div class="devlog-button">
+        <button type="button" class="btn btn-default">One</button>
+        <button type="button" class="btn btn-default">Two</button>
+        <button type="button" class="btn btn-default">Three</button>
+        <button type="button" class="btn btn-default">Four</button>
+    </div>
+    
     <div>{{record.description | raw}}</div>
     
+   
     {% for devlog in record.devlog %}
         <div class="devlog-div">
         <div align=center>
@@ -26,13 +34,17 @@ notFoundMessage = "Record not found"
             </div>
         
             <h2>{{devlog.devlog_name}}</h2>
-            <p>{{devlog.devlog_content}}</p>
-            <p>{{devlog.devlog_short_description}}</p>
-            <div class="progress">
+            <p>{{devlog.devlog_date}}</p>
+              <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="{{devlog.devlog_progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{devlog.devlog_progress}}%;">
     <span class="sr-only">60% Complete</span>
+        
   </div>
 </div>
         </div>
+            <p>{{devlog.devlog_content}}</p>
+            <p>{{devlog.devlog_short_description}}</p>
+            <p>{{devlog.devlog_link}}</p>
+          
     {%endfor%}
 </div>
