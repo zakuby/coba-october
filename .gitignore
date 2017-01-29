@@ -1,5 +1,7 @@
 /bootstrap/compiled.php
 /vendor
+/config
+.htaccess
 composer.phar
 .DS_Store
 .idea

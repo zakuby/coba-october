@@ -532,6 +532,12 @@ header[role="banner"] {
 .bx-wrapper img {
     margin: 0 auto;
 }
+.bx-wrapper .bx-viewport
+{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
 .devlog-thumb{
 
@@ -546,7 +552,7 @@ header[role="banner"] {
 {    width: 800px;
 }
 .devlog-content{
-	margin-left: 30px;
+	padding-bottom: 200px;
 }
 .devlog-button{    
     margin-bottom: 70px;
