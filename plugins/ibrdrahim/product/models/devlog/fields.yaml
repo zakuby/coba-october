@@ -38,26 +38,4 @@ fields:
         size: giant
         oc.commentPosition: ''
         span: full
-        type: textarea
-    featured_image:
-        label: 'Featured Image'
-        oc.commentPosition: ''
-        mode: image
-        imageWidth: '200'
-        imageHeight: '200'
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: full
-        type: fileupload
-    gallery:
-        label: Gallery
-        oc.commentPosition: ''
-        mode: image
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: full
-        type: fileupload
+        type: richeditor

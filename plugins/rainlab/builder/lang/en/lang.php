@@ -77,6 +77,8 @@ return [
         'error_boolean_default_value' => "Invalid default value for the boolean column ':column'. The allowed values are '0' and '1'.",
         'error_unsigned_negative_value' => "The default value for the unsigned column ':column' can't be negative.",
         'error_table_already_exists' => "The table ':name' already exists in the database.",
+        'error_table_name_too_long' => "The table name should not be longer than 64 characters.",
+        'error_column_name_too_long' => "The column name ':column' is too long. Column names should not be longer than 64 characters."
     ],
     'model' => [
         'menu_label' => 'Models',
@@ -254,6 +256,8 @@ return [
         'property_group_relation' => 'Relation',
         'property_relation_prompt' => 'Prompt',
         'property_relation_prompt_description' => 'Text to display when there is no available selections.',
+        'property_empty_option' => 'Empty option',
+        'property_empty_option_description' => 'The empty option corresponds to the empty selection, but unlike the placeholder it can be reselected.',
         'control_group_standard' => 'Standard',
         'control_group_widgets' => 'Widgets',
         'click_to_add_control' => 'Add control',
@@ -361,6 +365,8 @@ return [
         'column_label_format' => 'Format',
         'column_label_value_from' => 'Value from',
         'error_duplicate_column' => "Duplicate column field name: ':column'.",
+        'btn_add_database_columns' => 'Add database columns',
+        'all_database_columns_exist' => 'All database columns are already defined in the list'
     ],
     'controller' => [
         'menu_label' => 'Controllers',

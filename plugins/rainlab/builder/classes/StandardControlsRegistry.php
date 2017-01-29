@@ -127,7 +127,14 @@ class StandardControlsRegistry
     protected function registerDropdownControl()
     {
         $properties = [
-            'options' =>  [
+            'emptyOption' => [
+                'title' => Lang::get('rainlab.builder::lang.form.property_empty_option'),
+                'description' => Lang::get('rainlab.builder::lang.form.property_empty_option_description'),
+                'type' => 'string',
+                'ignoreIfEmpty' => true,
+                'sortOrder' => 82
+            ],
+            'options' => [
                 'title' => Lang::get('rainlab.builder::lang.form.property_options'),
                 'type' => 'dictionary',
                 'ignoreIfEmpty' => true,
@@ -331,7 +338,6 @@ class StandardControlsRegistry
             'required',
             'defaultFrom',
             'dependsOn',
-            'trigger', 
             'preset',
             'attributes'
         ];
@@ -841,7 +847,6 @@ class StandardControlsRegistry
             'dependsOn',
             'preset',
             'attributes',
-            'trigger',
             'disabled'
         ];
 

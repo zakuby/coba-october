@@ -549,6 +549,9 @@ header[role="banner"] {
 	margin-left: 30px;
 }
 .devlog-button{    
-	margin-left: 550px;
     margin-bottom: 70px;
+}
+
+.devlog-button > a{
+margin-right: 2px;
 }

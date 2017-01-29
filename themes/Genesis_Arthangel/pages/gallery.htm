@@ -1,0 +1,35 @@
+title = "gallery"
+url = "/game/:slug/gallery"
+layout = "game"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Ibrdrahim\product\Models\Game"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+<div class="devlog-content">
+    <div class="devlog-title">
+        <h1>{{record.name}} Gallery</h1>
+    </div>
+		<div class="container">
+			<div class="row">
+				{%for img in record.gallery%}
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="{{img.path}}"><img class="img-responsive" src="{{img.path}}" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				{%endfor%}
+			</div>
+		</div>
+</div>
