@@ -27,7 +27,8 @@ class Game extends Model
     public $table = 'ibrdrahim_product_game';
 
     public $hasMany = [
-        'devlog' => 'Ibrdrahim\product\Models\Devlog'
+        'devlog' => ['Ibrdrahim\product\Models\Devlog',
+                    'order'      => 'devlog_date desc']
     ];
 
     public $attachOne = [
