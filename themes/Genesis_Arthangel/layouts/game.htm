@@ -32,17 +32,24 @@ description = "Game layout"
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-        
+    
     <!-- Menu -->
     <nav class="menu" id="theMenu">
         <div class="menu-wrap">
-            <h1 class="logo"><a href="index.html#home">DSGN NYC</a></h1>
+            <h1 class="logo"><a href="index.html#home">Genesis </br> Arthangel</a></h1>
             <i class="fa fa-times menu-close"></i>
-            <a href="#home" class="smoothScroll">Home</a>
-            <a href="#about" class="smoothScroll">About</a>
-            <a href="#portfolio" class="smoothScroll">Portfolio</a>
-            <a href="#services" class="smoothScroll">Services</a>
-            <a href="#contact" class="smoothScroll">Contact</a>
+            <a href="{{ 'home'|page }}" class="{% if this.page.id == 'home' %}
+                        active
+                     {% endif %}">Home</a>
+            <a href="{{ 'service'|page }}" class="{% if this.page.id == 'service' %}
+                        active
+                     {% endif %}">Service</a>
+            <a href="{{ 'product'|page }}" class="{% if this.page.id == 'product' %}
+                        active
+                     {% endif %}">Product</a>
+            <a href="{{ 'about-us'|page }}" class="{% if this.page.id == 'about-us' %}
+                        active
+                     {% endif %}">About Us</a>
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-dribbble"></i></a>
@@ -52,21 +59,11 @@ description = "Game layout"
         <!-- Menu button -->
         <div class="visible-xs" id="menuToggle"><i class="fa fa-bars"></i></div>
     </nav>
-
+    
     <header role="banner" class="hidden-xs">
         <img id="logo-main" src="{{ 'assets/img/october.png'|theme }}" width="200" alt="Logo Thing main logo">
     </header><!-- header role="banner" -->
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
+    <nav class="hidden-xs navbar navbar-default" role="navigation">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
@@ -86,19 +83,15 @@ description = "Game layout"
       </div><!-- /.navbar-collapse -->
     </nav>
 
-    <div class="col-md-12">
-	    <div class="col-md-4">
-	    	
-	    </div>
-		    <div class="devlog-button">
-			        <a href="{{ 'devlog'|page({ slug: record.slug }) }}" class="btn btn-default col-md-1">Development</a>
-			        <a href="{{ 'gallery'|page({ slug: record.slug }) }}" class="btn btn-default col-md-1">Gallery</a>
-			        <a href="{{record.wiki_link}}" class="btn btn-default col-md-1">Wiki</a>
-			        <a href="{{record.external_link}}" class="btn btn-default col-md-1">Download</a>
-		    </div>
-	    <div class="col-md-4">
-	    </div>
-    </div>
+    
+	<div class="devlog-button">
+	        <a href="{{ 'devlog'|page({ slug: record.slug }) }}" class="btn btn-default col-md-offset-4 col-md-1 col-xs-12">Development</a>
+	        <a href="{{ 'gallery'|page({ slug: record.slug }) }}" class="btn btn-default col-md-1  col-md-1 col-xs-12">Gallery</a>
+	        <a href="{{record.wiki_link}}" class="btn btn-default col-md-1 col-xs-12">Wiki</a>
+	        <a href="{{record.external_link}}" class="btn btn-default col-md-1 col-xs-12">Download</a>
+	</div>
+	<div class="col-md-4">
+	</div>
     
     {%page%}
     
@@ -118,7 +111,7 @@ description = "Game layout"
             $('.bxslider').bxSlider({
                 pager:false,
                 auto:true,
-                pause:2000
+                pause:5000
             });
             $.stellar({
                 horizontalScrolling: false,

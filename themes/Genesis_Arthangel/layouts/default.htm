@@ -36,13 +36,20 @@ description = "Default layout"
     <!-- Menu -->
     <nav class="menu" id="theMenu">
         <div class="menu-wrap">
-            <h1 class="logo"><a href="index.html#home">DSGN NYC</a></h1>
+            <h1 class="logo"><a href="index.html#home">Genesis </br> Arthangel</a></h1>
             <i class="fa fa-times menu-close"></i>
-            <a href="#home" class="smoothScroll">Home</a>
-            <a href="#about" class="smoothScroll">About</a>
-            <a href="#portfolio" class="smoothScroll">Portfolio</a>
-            <a href="#services" class="smoothScroll">Services</a>
-            <a href="#contact" class="smoothScroll">Contact</a>
+            <a href="{{ 'home'|page }}" class="{% if this.page.id == 'home' %}
+                        active
+                     {% endif %}">Home</a>
+            <a href="{{ 'service'|page }}" class="{% if this.page.id == 'service' %}
+                        active
+                     {% endif %}">Service</a>
+            <a href="{{ 'product'|page }}" class="{% if this.page.id == 'product' %}
+                        active
+                     {% endif %}">Product</a>
+            <a href="{{ 'about-us'|page }}" class="{% if this.page.id == 'about-us' %}
+                        active
+                     {% endif %}">About Us</a>
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-dribbble"></i></a>
@@ -56,17 +63,7 @@ description = "Default layout"
     <header role="banner" class="hidden-xs">
         <img id="logo-main" src="{{ 'assets/img/october.png'|theme }}" width="200" alt="Logo Thing main logo">
     </header><!-- header role="banner" -->
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
+    <nav class="hidden-xs navbar navbar-default" role="navigation">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
@@ -104,7 +101,7 @@ description = "Default layout"
             $('.bxslider').bxSlider({
                 pager:false,
                 auto:true,
-                pause:2000
+                pause:5000
             });
             $.stellar({
                 horizontalScrolling: false,
