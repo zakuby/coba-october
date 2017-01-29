@@ -75,7 +75,7 @@ description = "Game layout"
                      {% endif %}"><a href="{{ 'service'|page }}">Service</a></li>
            <li class="{% if this.page.id == 'product' %}
                         active
-                     {% endif %}"><a href="#">Product</a></li>
+                     {% endif %}"><a href="{{ 'product'|page }}" >Product</a></li>
            <li class="{% if this.page.id == 'about-us' %}
                         active
                      {% endif %}"><a href="{{ 'about-us'|page }}">About Us</a></li>
@@ -111,7 +111,8 @@ description = "Game layout"
             $('.bxslider').bxSlider({
                 pager:false,
                 auto:true,
-                pause:5000
+                pause:5000,
+                speed:1000
             });
             $.stellar({
                 horizontalScrolling: false,
