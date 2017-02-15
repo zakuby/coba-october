@@ -8,7 +8,8 @@ description = "Game layout"
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <link rel="shortcut icon" type="image/png" href="{{ 'assets/ico/favicon.png'|theme}}">
 
     <title>Genesis Arthangel Studio - {{ this.page.title }}</title>
 
@@ -31,7 +32,7 @@ description = "Game layout"
     <![endif]-->
   </head>
 
-  <body style="background: black" data-spy="scroll" data-offset="0" data-target="#theMenu">
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
     
     <!-- Menu -->
     <nav class="menu" id="theMenu">
@@ -61,8 +62,6 @@ description = "Game layout"
     </nav>
     
     <header role="banner" class="hidden-xs">
-        <img id="logo-main" src="{{ 'assets/img/header-logo.png'|theme }}" width="200" alt="Logo Thing main logo">
-        <img id="logo-text" src="{{ 'assets/img/header-text.png'|theme }}" width="200" alt="Logo Thing text">
     </header><!-- header role="banner" -->
     <nav style="max-height: 52px;margin-bottom: 0px !important;" class="hidden-xs navbar navbar-default" role="navigation">
       <!-- Collect the nav links, forms, and other content for toggling -->
