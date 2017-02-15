@@ -23,7 +23,7 @@ pageNumber = "{{ :page }}"
                                 <div class="project">
                                     <div class="">
                                         <div class="">
-                                            <img class="img-responsive" src="{{record.featured_image.path}}" alt="">
+                                            <img class="img-responsive" src="{{record.featured_image.thumb(360,250,{'mode':'crop'})}}">
                                         </div>
                                         <div class="overlay"></div>
                                     </div>
