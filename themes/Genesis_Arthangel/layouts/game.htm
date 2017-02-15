@@ -31,7 +31,7 @@ description = "Game layout"
     <![endif]-->
   </head>
 
-  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+  <body style="background: black" data-spy="scroll" data-offset="0" data-target="#theMenu">
     
     <!-- Menu -->
     <nav class="menu" id="theMenu">
@@ -61,9 +61,10 @@ description = "Game layout"
     </nav>
     
     <header role="banner" class="hidden-xs">
-        <img id="logo-main" src="{{ 'assets/img/october.png'|theme }}" width="200" alt="Logo Thing main logo">
+        <img id="logo-main" src="{{ 'assets/img/header-logo.png'|theme }}" width="200" alt="Logo Thing main logo">
+        <img id="logo-text" src="{{ 'assets/img/header-text.png'|theme }}" width="200" alt="Logo Thing text">
     </header><!-- header role="banner" -->
-    <nav class="hidden-xs navbar navbar-default" role="navigation">
+    <nav style="max-height: 52px;margin-bottom: 0px !important;" class="hidden-xs navbar navbar-default" role="navigation">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
@@ -84,16 +85,23 @@ description = "Game layout"
     </nav>
 
     
-	<div class="devlog-button">
-	        <a href="{{ 'devlog'|page({ slug: record.slug }) }}" class="btn btn-default col-md-offset-4 col-md-1 col-xs-12">Development</a>
-	        <a href="{{ 'gallery'|page({ slug: record.slug }) }}" class="btn btn-default col-md-1  col-md-1 col-xs-12">Gallery</a>
-	        <a href="{{record.wiki_link}}" class="btn btn-default col-md-1 col-xs-12">Wiki</a>
-	        <a href="{{record.external_link}}" class="btn btn-default col-md-1 col-xs-12">Download</a>
-	</div>
-	<div class="col-md-4">
-	</div>
-    
-    {%page%}
+    <div class="container game-bg-content" style="background: white" >
+      <div class="devlog-button">
+              <a href="{{ 'devlog'|page({ slug: record.slug }) }}" class="btn btn-default col-md-offset-2 col-md-2 col-xs-12">Development</a>
+              <a href="{{ 'gallery'|page({ slug: record.slug }) }}" class="btn btn-default col-md-2 col-xs-12">Gallery</a>
+              <a href="{{record.wiki_link}}" class="btn btn-default col-md-2 col-xs-12">Wiki</a>
+              <a href="{{record.external_link}}" class="btn btn-default col-md-2 col-xs-12">Download</a>
+      </div>
+
+      <div class="col-md-12" >  
+        <img style="margin-bottom: 50px;" class="game-thumb" src="{{record.featured_image.path}}">  
+        <a style="color:#330000 !important;" href="{{ 'game'|page({ slug: record.slug }) }}">
+          <h1 style="text-align: center; margin-bottom: 50px;" >{{record.name}}</h1>
+        </a>
+      </div>
+        
+        {%page%}
+    </div>
     
     <!-- Bootstrap core JavaScript
     ================================================== -->

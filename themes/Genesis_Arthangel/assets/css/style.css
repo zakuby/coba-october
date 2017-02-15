@@ -16,8 +16,6 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-html,
-button,
 input,
 select,
 textarea {
@@ -515,8 +513,22 @@ header[role="banner"] {
 #logo-main {
 	height: 200px;
 	position: absolute;
-	right: 0px;
+	left: 20px;
 	top:10px;
+}
+
+#logo-text{
+	height: 230px;
+    display: block;
+    margin: auto;
+    width: 45%;
+}
+
+.game-thumb{
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .center{
