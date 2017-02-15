@@ -372,6 +372,8 @@ h1, h2, h3, h4, h5, h6 {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	border-bottom: solid 2px transparent;
+	height: 250px;
+	overflow-y: scroll;
 }
 
 #portfoliowrap .proc:hover {
