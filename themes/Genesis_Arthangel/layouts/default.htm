@@ -62,22 +62,22 @@ description = "Default layout"
 
     <header role="banner" class="hidden-xs">
     </header><!-- header role="banner" -->
-    <nav class="hidden-xs navbar navbar-default" role="navigation">
+    <nav class="hidden-xs navbar navbar-default navbar-platform" role="navigation">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li class="{% if this.page.id == 'home' %}
+          <li class="navbar-list home-navbar {% if this.page.id == 'home' %}
                         active
-                     {% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
-          <li class="{% if this.page.id == 'service' %}
+                     {% endif %}"><a href="{{ 'home'|page }}"></a></li>
+          <li class="navbar-list service-navbar {% if this.page.id == 'service' %}
                         active
-                     {% endif %}"><a href="{{ 'service'|page }}">Service</a></li>
-           <li class="{% if this.page.id == 'product' %}
+                     {% endif %}"><a href="{{ 'service'|page }}"></a></li>
+           <li class="navbar-list product-navbar {% if this.page.id == 'product' %}
                         active
-                     {% endif %}"><a href="{{ 'product'|page }}" >Product</a></li>
-           <li class="{% if this.page.id == 'about-us' %}
+                     {% endif %}"><a href="{{ 'product'|page }}" ></a></li>
+           <li class="navbar-list about-navbar {% if this.page.id == 'about-us' %}
                         active
-                     {% endif %}"><a href="{{ 'about-us'|page }}">About Us</a></li>
+                     {% endif %}"><a href="{{ 'about-us'|page }}"></a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>
