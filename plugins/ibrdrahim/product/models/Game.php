@@ -32,7 +32,8 @@ class Game extends Model
     ];
 
     public $attachOne = [
-        'featured_image' => 'System\Models\File'
+        'featured_image' => 'System\Models\File',
+        'logo_image' => 'System\Models\File'
     ];
     public $attachMany = [
         'gallery' => 'System\Models\File'

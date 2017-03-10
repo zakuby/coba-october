@@ -629,3 +629,24 @@ header[role="banner"] {
 .navbar {
     border-radius: 0px !important; 
 }
+
+.service-badge-1:before{
+	content: url(../img/s1.jpg);
+}
+.service-badge-2:before{
+	content: url(../img/s2.jpg);
+}
+.service-badge-3:before{
+	content: url(../img/s3.jpg);
+}
+.service-badge-4:before{
+	content: url(../img/s4.jpg);
+}
+
+.facebook-badge-1{
+	content: url(../img/f1.jpg);
+}
+
+.facebook-badge-2{
+	content: url(../img/f2.jpg);
+}
