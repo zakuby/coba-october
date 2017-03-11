@@ -1,0 +1,45 @@
+[builderList]
+modelClass = "Ibrdrahim\product\Models\Game"
+scope = "-"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 3
+pageNumber = "{{ :page }}"
+==
+<div id="portfoliowrap">
+    <div class="container">
+        <div class="row">
+        
+            <h1>Our Products</h1>
+            
+            {% for record in records %}
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+                        <div class="project-wrapper">
+                            <a href="{{'game'|page({slug:record.slug})}}">
+                                <div class="project">
+                                    <div class="">
+                                        <div class="">
+                                            <img class="img-responsive" src="{{record.featured_image.thumb(360,250,{'mode':'crop'})}}">
+                                        </div>
+                                        <div class="overlay"></div>
+                                    </div>
+                                    <div class="proc">
+                                        <h3>{{record.name}}</h3>
+                                        <p>{{record.short_description}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div><!-- col-lg-4 -->
+            {%endfor%}
+        </div><!-- /row -->
+    </div><! --/container -->
+    <div class="container">
+        <div class="row mt centered">
+       
+            
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/Portfoliowrap -->

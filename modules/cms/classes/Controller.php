@@ -15,6 +15,7 @@ use Response;
 use Exception;
 use BackendAuth;
 use Twig_Environment;
+use Twig_Cache_Filesystem;
 use Cms\Twig\Loader as TwigLoader;
 use Cms\Twig\DebugExtension;
 use Cms\Twig\Extension as CmsTwigExtension;
@@ -484,14 +485,20 @@ class Controller
     {
         $this->loader = new TwigLoader;
 
+        $useCache = !Config::get('cms.twigNoCache');
         $isDebugMode = Config::get('app.debug', false);
+        $forceBytecode = Config::get('cms.forceBytecodeInvalidation', false);
 
         $options = [
             'auto_reload' => true,
             'debug' => $isDebugMode,
         ];
-        if (!Config::get('cms.twigNoCache')) {
-            $options['cache'] =  storage_path().'/cms/twig';
+
+        if ($useCache) {
+            $options['cache'] = new Twig_Cache_Filesystem(
+                storage_path().'/cms/twig',
+                $forceBytecode ? Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION : 0
+            );
         }
 
         $this->twig = new Twig_Environment($this->loader, $options);
@@ -971,22 +978,29 @@ class Controller
     }
 
     /**
-     * Renders a component's default content.
+     * Renders a component's default content, preserves the previous component context.
      * @param $name
      * @param array $parameters
      * @return string Returns the component default contents.
      */
     public function renderComponent($name, $parameters = [])
     {
+        $result = null;
+        $previousContext = $this->componentContext;
+
         if ($componentObj = $this->findComponentByName($name)) {
             $componentObj->id = uniqid($name);
             $componentObj->setProperties(array_merge($componentObj->getProperties(), $parameters));
-            if ($result = $componentObj->onRender()) {
-                return $result;
-            }
+            $this->componentContext = $componentObj;
+            $result = $componentObj->onRender();
         }
 
-        return $this->renderPartial($name.'::default', [], false);
+        if (!$result) {
+            $result = $this->renderPartial($name.'::default', [], false);
+        }
+
+        $this->componentContext = $previousContext;
+        return $result;
     }
 
     //

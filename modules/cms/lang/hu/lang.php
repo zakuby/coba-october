@@ -18,11 +18,12 @@ return [
             'widget_title_default' => 'Honlap',
             'online' => 'Online',
             'maintenance' => 'Karbantartás alatt',
-            'manage_themes' => 'Témák kezelése'
+            'manage_themes' => 'Témák kezelése',
+            'customize_theme' => 'Téma testreszabása'
         ]
     ],
     'theme' => [
-        'not_found_name' => "A következő sablon nem található: ':name'",
+        'not_found_name' => "A következő téma nem található: ':name'",
         'active' => [
             'not_set' => 'Nincs beállítva az aktív téma.',
             'not_found' => 'Az aktív téma nem található.'
@@ -45,6 +46,8 @@ return [
         'homepage_placeholder' => 'A honlap webcíme',
         'code_label' => 'Kód',
         'code_placeholder' => 'Egyedi azonosító ehhez a témához',
+        'preview_image_label' => 'Előnézet',
+        'preview_image_placeholder' => 'A téma előnézet képének elérési útvonala.',
         'dir_name_label' => 'Könyvtár',
         'dir_name_create_label' => 'A célkönyvtár',
         'theme_label' => 'Téma',
@@ -115,7 +118,10 @@ return [
         'delete_confirm_multiple' => 'Valóban törölni akarja a kijelölt lapokat?',
         'delete_confirm_single' => 'Valóban törölni akarja ezt a lapot?',
         'no_layout' => '-- nincs --',
-        'cms_page' => 'Lapok'
+        'cms_page' => 'Lapok',
+        'title' => 'Elnevezés szerint',
+        'url' => 'Webcím szerint',
+        'file_name' => 'Fájlnév szerint'
     ],
     'layout' => [
         'not_found_name' => "A(z) ':name' elrendezés nem található",
@@ -241,7 +247,8 @@ return [
         'not_found' => 'A kért sablon nem található.',
         'saved' => 'A módosítások sikeresen mentésre kerültek.',
         'no_list_records' => 'Nincs találat',
-        'delete_confirm' => 'Valóban törölni akarja a témát?'
+        'delete_confirm' => 'Valóban törölni akarja a témát?',
+        'order_by' => 'Rendezés'
     ],
     'permissions' => [
         'name' => 'Testreszabás',
@@ -318,5 +325,34 @@ return [
         'resize_image' => 'Kép átméretezése',
         'image_size' => 'Kép mérete:',
         'selected_size' => 'Kiválasztva:'
+    ],
+    'theme_log' => [
+        'hint' => 'Az adminisztrátorok által elvégzett módosítások az aktív téma fájlaiban, amiket az admin felületen keresztül hajtottak végre.',
+        'menu_label' => 'Téma napló',
+        'menu_description' => 'Változtatások listája az aktív témánál.',
+        'empty_link' => 'Kiürítés',
+        'empty_loading' => 'A kiürítés folyamatban...',
+        'empty_success' => 'A téma napló kiürítése megtörtént.',
+        'return_link' => 'Vissza a téma naplóhoz',
+        'id' => 'ID',
+        'id_label' => 'Napló ID',
+        'created_at' => 'Dátum',
+        'user' => 'Felhasználó',
+        'type' => 'Művelet',
+        'type_create' => 'Létrehozás',
+        'type_update' => 'Módosítás',
+        'type_delete' => 'Törlés',
+        'theme_name' => 'Téma',
+        'theme_code' => 'Kódnév',
+        'old_template' => 'Fájl (régi)',
+        'new_template' => 'Fájl (új)',
+        'template' => 'Fájl',
+        'diff' => 'Változtatások',
+        'old_value' => 'Régi tartalom',
+        'new_value' => 'Új tartalom',
+        'preview_title' => 'Változtatások',
+        'template_updated' => 'A fájl frissítve lett.',
+        'template_created' => 'A fájl létre lett hozva.',
+        'template_deleted' => 'A fájl törölve lett.',
     ]
 ];

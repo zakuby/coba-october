@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost/gart',
+    'url' => 'http://www.genesis-arthangel.com',
 
     /*
     |--------------------------------------------------------------------------

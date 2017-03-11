@@ -121,7 +121,7 @@ class CodeParser
     */
     protected function rebuild($path)
     {
-        $uniqueName = str_replace('.', '', uniqid('', true)).'_'.abs(crc32(mt_rand()));
+        $uniqueName = str_replace('.', '', uniqid('', true)).'_'.md5(mt_rand());
         $className = 'Cms'.$uniqueName.'Class';
 
         $body = $this->object->code;
@@ -232,7 +232,7 @@ class CodeParser
      */
     protected function getCacheFilePath()
     {
-        $hash = abs(crc32($this->filePath));
+        $hash = md5($this->filePath);
         $result = storage_path().'/cms/cache/';
         $result .= substr($hash, 0, 2).'/';
         $result .= substr($hash, 2, 2).'/';
@@ -334,11 +334,13 @@ class CodeParser
         /*
          * Compile cached file into bytecode cache
          */
-        if (function_exists('opcache_invalidate')) {
-            opcache_invalidate($path, true);
-        }
-        elseif (function_exists('apc_compile_file')) {
-            apc_compile_file($path);
+        if (Config::get('cms.forceBytecodeInvalidation', false)) {
+            if (function_exists('opcache_invalidate')) {
+                opcache_invalidate($path, true);
+            }
+            elseif (function_exists('apc_compile_file')) {
+                apc_compile_file($path);
+            }
         }
     }
 
